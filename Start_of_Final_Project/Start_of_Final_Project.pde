@@ -1,12 +1,12 @@
 
 ArrayList<BouncyBall> food = new ArrayList<BouncyBall>();
-BlackHole portal;
+CenterOfGravity portal;
 
 void setup() {
   size(800, 600);
   background(0);
   colorMode(HSB, 360, 100, 100, 100);
-  portal = new BlackHole();
+  portal = new CenterOfGravity();
 }
 
 void draw() {
@@ -18,11 +18,7 @@ void draw() {
     BouncyBall b = food.get(i);
     b.display();
     b.move();
-    b.isSuckedIn(portal);
+    b.isSuckedIn(CenterOfGravity);
 
-//    if (portal.consumes(b)) {
-//      food.remove(i); 
-//      portal.grow();
-//    }
   }
 }
